@@ -1,0 +1,115 @@
+.team {
+  padding: 114px 0;
+  background-color: $color-FFFFFF;
+
+  @media (max-width: $mobile) {
+    padding: 35px 0;
+  }
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .team-member {
+      width: 270px;
+      margin: 0 auto;
+
+      @media (max-width: $tablet) {
+        width: 227px;
+      }
+      @media (max-width: $mobile) {
+        width: 280px;
+        margin-bottom: 50px;
+      }
+
+      &__img-wrap {
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 25px;
+        }
+
+        .team-member__img {
+          @include width-height(270px, 270px);
+          object-fit: cover;
+
+          @media (max-width: $tablet) {
+            @include width-height(227px, 227px);
+          }
+          @media (max-width: $mobile) {
+            @include width-height(280px, 227px);
+          }
+        }
+      }
+
+      &__name {
+        @include font($font-weight-700, $font-size-24px);
+        text-transform: capitalize;
+        margin-bottom: 5px;
+
+        @media (max-width: $tablet) {
+          @include font($font-weight-700, $font-size-18px);
+        }
+      }
+
+      &__title {
+        @include font($font-weight-400, $font-size-18px);
+        color: $color-FF4343;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+          margin-bottom: 22px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 38px;
+        }
+      }
+
+      &__responsibility-wrap {
+        @include font($font-weight-400, $font-size-18px);
+        color: $color-6C7279;
+        margin-bottom: 38px;
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+          margin-bottom: 39px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 55px;
+        }
+      }
+
+      .social-network {
+        width: 109px;
+
+        &__list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .social-network__item {
+            @include social-network__item(33px);
+
+            a {
+              @include item-link($color-C6CBCD);
+              padding: 8px 0;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        @media (max-width: $mobile) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

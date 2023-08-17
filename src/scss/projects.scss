@@ -1,0 +1,88 @@
+.projects-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    height: 340px;
+    text-align: center;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      height: 230px;
+    }
+    @media (max-width: $mobile) {
+      height: 144px;
+    }
+
+    .mask {
+      @include width-height(100%, 340px);
+      padding-top: 128px;
+      color: $color-FFFFFF;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      background: $color-background-hover;
+
+      @media (max-width: $tablet) {
+        padding-top: 85px;
+        height: 230px;
+      }
+      @media (max-width: $mobile) {
+        padding-top: 50px;
+        height: 144px;
+      }
+
+      &-title {
+        @include font($font-weight-900, $font-size-24px);
+        margin-bottom: 38px;
+        text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+          margin-bottom: 24px;
+          font-size: $font-size-18px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 8px;
+        }
+      }
+
+      &-desc-wrap {
+        @include font($font-weight-400, $font-size-18px);
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+        }
+      }
+    }
+
+    &:hover {
+      .mask {
+        display: block;
+      }
+    }
+
+    &-img {
+      border: 2px solid $color-FFFFFF;
+      height: 340px;
+
+      @media (max-width: $tablet) {
+        height: 230px;
+      }
+
+      @media (max-width: $mobile) {
+        height: 144px;
+      }
+
+      img {
+        @include width-height(100%, 100%);
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.address {
+  padding: 71px 0;
+  background-color: $color-353C65;
+
+  @media (max-width: $tablet) {
+    padding: 47px 0 41px;
+  }
+  @media (max-width: $mobile) {
+    padding: 34px 0 33px;
+  }
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .address-location {
+      @media (max-width: $mobile) {
+        margin-bottom: 69px;
+      }
+
+      &__title {
+        @include font($font-weight-700, $font-size-18px);
+        @include address-title(29px);
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+          margin-bottom: 17px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 34px;
+        }
+      }
+
+      &__desc-wrap {
+        @include font($font-weight-400, $font-size-18px);
+        color: $color-FFFFFF;
+        text-align: center;
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+        }
+        @media (max-width: $mobile) {
+          width: 280px;
+        }
+      }
+    }
+
+    .address-share-with-love {
+      @media (max-width: $mobile) {
+        margin-bottom: 59px;
+      }
+
+      &__title {
+        @include font($font-weight-700, $font-size-18px);
+        @include address-title(49px);
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+          margin-bottom: 32px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 37px;
+        }
+      }
+
+      &__networks {
+        width: 171px;
+        margin: 0 auto;
+
+        @media (max-width: $mobile) {
+          width: 131px;
+        }
+
+        .address-share-with-love__network-list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          &__item {
+            @include social-network__item(39px);
+
+            a {
+              @include item-link($color-C6CBCD);
+              padding: 8px 0;
+            }
+
+            @media (max-width: $tablet) {
+              width: 35px;
+            }
+            @media (max-width: $mobile) {
+              width: 33px;
+            }
+          }
+        }
+      }
+    }
+
+    .address-about-activebox {
+      &__title {
+        @include font($font-weight-700, $font-size-18px);
+        @include address-title(29px);
+
+        @media (max-width: $tablet) {
+          margin-bottom: 16px;
+        }
+        @media (max-width: $mobile) {
+          font-size: $font-size-14px;
+          margin-bottom: 39px;
+        }
+      }
+
+      &__desc-wrap {
+        @include font($font-weight-400, $font-size-18px);
+        color: $color-FFFFFF;
+        text-align: center;
+        text-transform: capitalize;
+
+        @media (max-width: $tablet) {
+          font-size: $font-size-14px;
+        }
+      }
+    }
+  }
+}

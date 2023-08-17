@@ -1,0 +1,19 @@
+{
+  "name": "FrontEnd",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": "https://github.com/vitalibg/ActiveBox.git",
+  "author": "Vitali Akulau <vitalibg2023@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.9.3",
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "swiper": "^10.2.0"
+  }
+}

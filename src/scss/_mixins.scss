@@ -1,0 +1,52 @@
+@mixin font($font-weight, $font-size) {
+  font:
+    $font-style-normal #{$font-weight} #{$font-size} $line-height-normal,
+    $font-family-raleway;
+}
+
+@mixin width-height($width, $height) {
+  width: #{$width};
+  height: #{$height};
+}
+
+@mixin btn-base {
+  color: $color-FFFFFF;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 370px;
+  padding: 26px 0;
+  background-color: $color-FF4343;
+  transition: 0.3s;
+}
+
+@mixin btn-hover {
+  background-color: $color-B90C0C;
+  transition: 0.3s;
+}
+
+@mixin btn-active {
+  background-color: $color-E71414;
+  box-shadow: 0 0 30px 0 $color-background-active;
+  transition: 0.1s;
+}
+
+@mixin item-link($color) {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: auto;
+  color: #{$color};
+}
+
+@mixin social-network__item($width) {
+  border: 1px solid $color-C6CBCD;
+  width: #{$width};
+}
+
+@mixin address-title($margin-bottom) {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: #{$margin-bottom};
+  color: $color-FFFFFF;
+}

@@ -1,0 +1,72 @@
+.downloadHere {
+  padding: 134px 0 114px;
+  background-color: $color-FFFFFF;
+
+  @media (max-width: $tablet) {
+    padding: 129px 0 78px;
+  }
+  @media (max-width: $mobile) {
+    padding: 98px 0 45px;
+  }
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .downloadHere-title {
+      @include font($font-weight-400, $font-size-30px);
+      text-transform: capitalize;
+      margin-bottom: 25px;
+
+      @media (max-width: $tablet) {
+        font-size: $font-size-24px;
+        margin-bottom: 23px;
+        text-align: center;
+      }
+      @media (max-width: $mobile) {
+        font-size: $font-size-18px;
+        margin-bottom: 34px;
+      }
+    }
+
+    .downloadHere-desc {
+      @include font($font-weight-700, $font-size-18px);
+      margin-bottom: 48px;
+      text-transform: uppercase;
+
+      @media (max-width: $tablet) {
+        font-size: $font-size-14px;
+        margin-bottom: 44px;
+      }
+      @media (max-width: $mobile) {
+        font-size: $font-size-13px;
+        margin-bottom: 11px;
+        text-align: center;
+      }
+    }
+
+    .download-here-btn {
+      @include font($font-weight-900, $font-size-24px);
+      text-transform: uppercase;
+      @include btn-base;
+      &:hover {
+        @include btn-hover;
+      }
+      &:active {
+        @include btn-active;
+      }
+
+      @media (max-width: $tablet) {
+        @include font($font-weight-900, $font-size-18px);
+        width: 314px;
+      }
+      @media (max-width: $mobile) {
+        font-size: $font-size-24px;
+        width: 280px;
+        padding: 18px 0;
+      }
+    }
+  }
+}
